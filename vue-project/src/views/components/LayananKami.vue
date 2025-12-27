@@ -32,27 +32,26 @@
                             <img :src="service.image" :alt="service.title"
                                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                         </div>
-
                         <div class="flex-1 p-6 sm:p-8 flex flex-col justify-between">
                             <div>
                                 <h3 class="text-xl sm:text-2xl font-bold text-[#1a1a1a] mb-3 sm:mb-4">
                                     {{ service.title }}
                                 </h3>
-                                <p class="text-sm sm:text-base text-[#6b6b6b] mb-4 sm:mb-6 line-clamp-3">
+                                <p class="text-md sm:text-md font-thin space-y-3 sm:space-y-1.5 text-[#6b6b6b] mb-4 sm:mb-6 line-clamp-3">
                                     {{ service.description }}
                                 </p>
                             </div>
 
-                            <div>
-                                <p class="text-lg sm:text-xl font-bold text-[#8B4513] mb-4">
+                            <div class="flex flex-col">
+                                <p class="text-lg sm:text-md font-semibold text-[#8B4513]">
                                     {{ service.price }}
                                 </p>
                                 <button
-                                    class="inline-flex items-center text-[#8B4513] hover:text-[#6B3410] font-semibold text-sm sm:text-base transition-colors">
+                                    class="inline-flex items-center text-[#8B4513] hover:text-[#6B3410] text-sm sm:text-base transition-colors" style="font-weight: 400;">
                                     Lihat Detail
-                                    <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" stroke="currentColor"
+                                    <svg class="size-3 sm:size-4 ml-2" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                             d="M9 5l7 7-7 7" />
                                     </svg>
                                 </button>

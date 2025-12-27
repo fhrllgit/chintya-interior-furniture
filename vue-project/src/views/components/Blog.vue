@@ -1,32 +1,23 @@
 <template>
-    <div class="min-h-screen bg-gray-50">
-        <!-- Header Section -->
+    <div class="min-h-screen bg-[#f5f5f5]">
         <div class="px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 py-12 sm:py-16">
             <div class="text-center mb-8 sm:mb-12">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-3 sm:mb-4">
-                    Our Blog
+                    Blog Kami
                 </h1>
                 <p class="text-sm sm:text-base text-[#6b6b6b] max-w-3xl mx-auto">
-                    You can see our blog here, click to see blog detail. You can see our daily activity or news about exported, product process and many more.
+                    Artikel dan inspirasi seputar jasa pembuatan furniture interior custom untuk hunian dan ruang usaha
+                    yang rapi fungsional dan berkualitas.
                 </p>
             </div>
 
-            <!-- Blog Grid Layout -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-                
-                <!-- Featured Post (Left Side) -->
                 <div class="lg:col-span-5">
-                    <div 
-                        v-if="currentFeaturedPost"
-                        @click="toBlogDetail(currentFeaturedPost.id)"
-                        class="bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer h-full"
-                    >
+                    <div v-if="currentFeaturedPost" @click="toBlogDetail(currentFeaturedPost.id)"
+                        class="bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer h-full">
                         <div class="relative h-64 sm:h-80 lg:h-96 overflow-hidden">
-                            <img 
-                                :src="currentFeaturedPost.image" 
-                                :alt="currentFeaturedPost.title"
-                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                            >
+                            <img :src="currentFeaturedPost.image" :alt="currentFeaturedPost.title"
+                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
                                 <p class="text-xs sm:text-sm mb-2 opacity-90">{{ currentFeaturedPost.date }}</p>
@@ -41,28 +32,19 @@
                     </div>
                 </div>
 
-                <!-- Blog List (Right Side) -->
                 <div class="lg:col-span-7 space-y-4 sm:space-y-6">
-                    <div 
-                        v-for="post in currentBlogPosts" 
-                        :key="post.id"
-                        @click="toBlogDetail(post.id)"
-                        class="bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer"
-                    >
+                    <div v-for="post in currentBlogPosts" :key="post.id" @click="toBlogDetail(post.id)"
+                        class="bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
                         <div class="flex flex-col sm:flex-row">
-                            <!-- Image -->
                             <div class="w-full sm:w-48 md:w-56 h-48 sm:h-auto overflow-hidden flex-shrink-0">
-                                <img 
-                                    :src="post.image" 
-                                    :alt="post.title"
-                                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                                >
+                                <img :src="post.image" :alt="post.title"
+                                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                             </div>
 
-                            <!-- Content -->
                             <div class="flex-1 p-5 sm:p-6 flex flex-col justify-between">
                                 <div>
-                                    <h3 class="text-lg sm:text-xl font-bold text-[#1a1a1a] mb-2 hover:text-[#8B4513] transition-colors line-clamp-2">
+                                    <h3
+                                        class="text-lg sm:text-xl font-bold text-[#1a1a1a] mb-2 hover:text-[#8B4513] transition-colors line-clamp-2">
                                         {{ post.title }}
                                     </h3>
                                     <p class="text-xs sm:text-sm text-[#999] mb-3">
@@ -78,41 +60,26 @@
                 </div>
 
             </div>
-
-            <!-- Pagination -->
             <div class="flex justify-center items-center gap-2 mt-8 sm:mt-12">
-                <button 
-                    @click="changePage(1)"
-                    :class="[
-                        'w-10 h-10 sm:w-12 sm:h-12 rounded-lg font-semibold transition-colors',
-                        currentPage === 1 
-                            ? 'bg-[#0F4C75] text-white' 
-                            : 'bg-white text-[#1a1a1a] border border-gray-300 hover:bg-gray-50'
-                    ]"
-                >
-                    1
-                </button>
-                <button 
-                    @click="changePage(2)"
-                    :class="[
-                        'w-10 h-10 sm:w-12 sm:h-12 rounded-lg font-semibold transition-colors',
-                        currentPage === 2 
-                            ? 'bg-[#FFA500] text-white' 
-                            : 'bg-white text-[#1a1a1a] border border-gray-300 hover:bg-gray-50'
-                    ]"
-                >
+                <button @click="changePage(1)" :class="[
+                    'w-10 h-10 sm:w-12 sm:h-12 rounded-lg font-semibold transition-colors',
+                    currentPage === 1
+                        ? 'bg-[#0F4C75] text-white'
+                        : 'bg-white text-[#1a1a1a] border border-gray-300 hover:bg-gray-50']">1</button>
+                <button @click="changePage(2)" :class="[
+                    'w-10 h-10 sm:w-12 sm:h-12 rounded-lg font-semibold transition-colors',
+                    currentPage === 2
+                        ? 'bg-[#FFA500] text-white'
+                        : 'bg-white text-[#1a1a1a] border border-gray-300 hover:bg-gray-50'
+]">
                     2
                 </button>
-                <button 
-                    @click="nextPage"
-                    :disabled="currentPage === 2"
-                    :class="[
-                        'w-auto h-10 sm:h-12 px-4 rounded-lg font-semibold transition-colors',
-                        currentPage === 2
-                            ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                            : 'bg-white text-[#1a1a1a] border border-gray-300 hover:bg-gray-50'
-                    ]"
-                >
+                <button @click="nextPage" :disabled="currentPage === 2" :class="[
+                    'w-auto h-10 sm:h-12 px-4 rounded-lg font-semibold transition-colors',
+                    currentPage === 2
+                        ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                        : 'bg-white text-[#1a1a1a] border border-gray-300 hover:bg-gray-50'
+                ]">
                     Next »
                 </button>
             </div>
@@ -127,7 +94,6 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 const currentPage = ref(1);
 
-// Page 1 - Export Articles
 const page1Data = {
     featured: {
         id: 'featured-furniture-export',
@@ -161,7 +127,6 @@ const page1Data = {
     ]
 };
 
-// Page 2 - Interior & Furniture Articles
 const page2Data = {
     featured: {
         id: 'modern-interior-design-trends',

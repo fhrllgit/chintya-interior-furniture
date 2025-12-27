@@ -1,8 +1,6 @@
 <template>
     <div class="min-h-screen bg-gray-50">
         <div class="px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 py-8 sm:py-12">
-
-            <!-- Back Button -->
             <button @click="router.back()"
                 class="inline-flex items-center text-[#8B4513] hover:text-[#6B3410] font-semibold mb-6 sm:mb-8 transition-colors">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -11,15 +9,10 @@
                 Back to Blog
             </button>
 
-            <!-- Blog Detail Content -->
             <div v-if="post" class="max-w-4xl mx-auto">
-
-                <!-- Featured Image -->
                 <div class="w-full h-64 sm:h-96 md:h-[500px] rounded-xl sm:rounded-2xl overflow-hidden mb-6 sm:mb-8">
                     <img :src="post.image" :alt="post.title" class="w-full h-full object-cover">
                 </div>
-
-                <!-- Article Header -->
                 <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 mb-6 sm:mb-8">
                     <div class="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm text-[#999] mb-4 sm:mb-6">
                         <div class="flex items-center gap-2">
@@ -55,13 +48,11 @@
                     </p>
                 </div>
 
-                <!-- Article Content -->
                 <div
                     class="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 prose prose-sm sm:prose-base lg:prose-lg max-w-none">
                     <div v-html="post.content" class="text-[#4a4a4a] leading-relaxed space-y-4 sm:space-y-6"></div>
                 </div>
 
-                <!-- Share Section -->
                 <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8 mt-6 sm:mt-8">
                     <h3 class="text-lg sm:text-xl font-bold text-[#1a1a1a] mb-4">Share this article</h3>
                     <div class="flex flex-wrap gap-3">
@@ -92,7 +83,6 @@
                     </div>
                 </div>
 
-                <!-- Related Posts -->
                 <div class="mt-12 sm:mt-16">
                     <h2 class="text-2xl sm:text-3xl font-bold text-[#1a1a1a] mb-6 sm:mb-8">Related Articles</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -114,8 +104,6 @@
                 </div>
 
             </div>
-
-            <!-- Post Not Found -->
             <div v-else class="text-center py-16 sm:py-20">
                 <p class="text-lg sm:text-xl text-[#6b6b6b]">Blog post not found</p>
             </div>
@@ -131,7 +119,6 @@ import { useRoute, useRouter } from 'vue-router';
 const route = useRoute();
 const router = useRouter();
 
-// Blog Posts Data - Page 1 (Export Articles)
 const blogPostsData = {
     'featured-furniture-export': {
         id: 'featured-furniture-export',
@@ -252,7 +239,6 @@ const blogPostsData = {
         `
     },
     
-    // Page 2 - Interior & Furniture Articles
     'modern-interior-design-trends': {
         id: 'modern-interior-design-trends',
         title: 'Modern Interior Design Trends 2024',
@@ -390,8 +376,6 @@ const post = computed(() => blogPostsData[route.params.id]);
 
 const relatedPosts = computed(() => {
     if (!post.value) return [];
-    
-    // Filter out current post and get 3 random related posts
     const allPosts = Object.values(blogPostsData).filter(p => p.id !== post.value.id);
     return allPosts.slice(0, 3).map(p => ({
         id: p.id,
