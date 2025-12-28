@@ -1,5 +1,5 @@
 <template>
-    <div ref="counterSection" class="w-full mt-15 bg-gradient-to-br from-[#8B7355] to-[#6B5845] py-16 sm:py-20 md:py-24 lg:py-28">
+    <div ref="counterSection" class="w-full mb-20 mt-15 bg-gradient-to-br from-[#8B7355] to-[#6B5845] py-16 sm:py-20 md:py-24 lg:py-28">
         <div class="px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
                 <div class="flex flex-col items-center justify-center text-center group">

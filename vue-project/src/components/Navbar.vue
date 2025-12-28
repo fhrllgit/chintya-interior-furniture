@@ -9,12 +9,11 @@
                         Furniture</h1>
                 </div>
                 <nav class="md:flex hidden items-center gap-6 lg:gap-8 text-sm lg:text-base">
-                    <div v-for="item in arrNavItems" :key="item">
+                    <RouterLink v-for="item in arrNavItems" :to="item.to" :key="item">
                         <button class="cursor-pointer hover:text-[#8B7355] transition-colors">{{ item.name }}</button>
-                    </div>
+                    </RouterLink>
                 </nav>
-                <div
-                    class="md:flex hidden items-center justify-center border-2 border-[#aba8a895] hover:bg-[#8B7355] hover:text-white hover:border-[#8B7355] transition-all w-36 lg:w-40 text-xs lg:text-sm cursor-pointer font-semibold text-center py-2 rounded-3xl">
+                <div class="md:flex hidden items-center justify-center border-2 border-[#aba8a895] hover:bg-[#8B7355] hover:text-white hover:border-[#8B7355] transition-all w-36 lg:w-40 text-xs lg:text-sm cursor-pointer font-semibold text-center py-2 rounded-3xl">
                     <button class="cursor-pointer">Konsultasi</button>
                 </div>
                 <button @click="toggleMenu" class="md:hidden flex p-2 -mr-2" aria-label="Toggle menu">
@@ -52,6 +51,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { RouterLink } from 'vue-router'
 
 const isMenuOpen = ref(false)
 const showNavbar = ref(true)

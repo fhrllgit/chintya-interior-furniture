@@ -22,7 +22,6 @@
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-4 sm:mb-6">
                         {{ service.title }}
                     </h1>
-
                     <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-8 sm:mb-10 leading-relaxed max-w-4xl">
                         {{ service.fullDescription }}
                     </p>
@@ -81,8 +80,7 @@
                                 </div>
                             </div>
 
-                            <button
-                                class="w-full bg-gradient-to-r from-[#8B4513] to-[#6B3410] hover:from-[#6B3410] hover:to-[#8B4513] text-white font-bold py-4 px-6 rounded-xl sm:rounded-2xl transition-all duration-300 text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 group">
+                            <button class="w-full bg-gradient-to-r from-[#8B4513] to-[#6B3410] hover:from-[#6B3410] hover:to-[#8B4513] text-white font-bold py-4 px-6 rounded-xl sm:rounded-2xl transition-all duration-300 text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 group">
                                 <span>Konsultasi Harga</span>
                                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,16 +106,12 @@
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                        <div v-for="(image, index) in service.gallery" :key="index" @click="openLightbox(index)"
-                            class="relative overflow-hidden rounded-2xl sm:rounded-3xl cursor-pointer group aspect-[4/3] bg-gray-100 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                        <div v-for="(image, index) in service.gallery" :key="index" @click="openLightbox(index)" class="relative overflow-hidden rounded-2xl sm:rounded-3xl cursor-pointer group aspect-[4/3] bg-gray-100 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                             <img :src="image" :alt="`${service.title} ${index + 1}`"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                             </div>
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100">
                                 <div class="bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-xl">
                                     <svg class="w-6 h-6 sm:w-8 sm:h-8 text-[#8B4513]" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
@@ -139,8 +133,7 @@
             </div>
 
             <div v-else class="text-center py-20 sm:py-32">
-                <div
-                    class="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-gray-100 rounded-full mb-6">
+                <div class="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-gray-100 rounded-full mb-6">
                     <svg class="w-10 h-10 sm:w-12 sm:h-12 text-gray-400" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -155,33 +148,28 @@
             <div v-if="isLightboxOpen"
                 class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
                 @click="closeLightbox">
-                <button @click="closeLightbox"
-                    class="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-[#8B4513] transition-colors z-10 p-2 hover:bg-white/10 rounded-full">
+                <button @click="closeLightbox" class="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-[#8B4513] transition-colors z-10 p-2 hover:bg-white/10 rounded-full">
                     <svg class="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
-                <button @click.stop="previousImage"
-                    class="absolute left-4 sm:left-8 text-white hover:text-[#8B4513] transition-all p-3 hover:bg-white/10 rounded-full">
+                <button @click.stop="previousImage" class="absolute left-4 sm:left-8 text-white hover:text-[#8B4513] transition-all p-3 hover:bg-white/10 rounded-full">
                     <svg class="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
 
                 <div @click.stop class="relative max-w-7xl max-h-[90vh] mx-4 sm:mx-8">
-                    <img :src="service.gallery[currentImageIndex]" :alt="`${service.title} ${currentImageIndex + 1}`"
-                        class="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl">
-                    <div
-                        class="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white/95 backdrop-blur-sm text-gray-900 px-6 py-3 rounded-full shadow-xl">
+                    <img :src="service.gallery[currentImageIndex]" :alt="`${service.title} ${currentImageIndex + 1}`" class="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl">
+                    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white/95 backdrop-blur-sm text-gray-900 px-6 py-3 rounded-full shadow-xl">
                         <span class="text-sm sm:text-base font-bold">
                             {{ currentImageIndex + 1 }} / {{ service.gallery.length }}
                         </span>
                     </div>
                 </div>
 
-                <button @click.stop="nextImage"
-                    class="absolute right-4 sm:right-8 text-white hover:text-[#8B4513] transition-all p-3 hover:bg-white/10 rounded-full">
+                <button @click.stop="nextImage" class="absolute right-4 sm:right-8 text-white hover:text-[#8B4513] transition-all p-3 hover:bg-white/10 rounded-full">
                     <svg class="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>

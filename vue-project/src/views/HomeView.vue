@@ -1,15 +1,17 @@
 <template>
   <Navbar />
-  <Home />
+  <Home id="beranda" />
   <MiniTipe />
-  <Tentang />
-  <Galeri />
-  <LayananKami />
+  <Tentang id="tentang-kami" />
+  <Galeri id="galeri" />
+  <LayananKami id="layanan" />
   <div class="bg-[#f5f5f5]">
     <CtaYears />
-    <Blog/>
+    <Blog id="blog" />
     <Ratting />
+    <Contact id="kontak" />
   </div>
+  <Footer />
   <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20konsultasi" target="_blank"
     class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full px-6 py-3 sm:px-8 sm:py-4 shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center gap-2 sm:gap-3">
     <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -30,5 +32,7 @@ import LayananKami from './components/LayananKami.vue';
 import CtaYears from './components/CtaYears.vue';
 import Blog from './components/Blog.vue';
 import Ratting from './components/common/ratting.vue';
+import Footer from './components/footer.vue';
+import Contact from './components/contact.vue';
 
 </script>

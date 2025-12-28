@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen bg-[#f5f5f5]">
-        <div class="px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 py-12 sm:py-16">
+        <div class="px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 py-8 sm:py-16">
             <div class="text-center mb-8 sm:mb-12">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-3 sm:mb-4">
                     Blog Kami

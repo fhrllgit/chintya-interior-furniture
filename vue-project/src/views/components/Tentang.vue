@@ -1,6 +1,6 @@
 <template>
-    <div class="min-h-screen">
-        <div class="px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 py-8 sm:py-12">
+    <div class="h-full flex items-center justify-center border min-h-screen">
+        <div class="px-4 border sm:px-6 md:px-10 lg:px-20 xl:px-32  sm:py-12 w-full h-full">
             <div class="flex w-full flex-col">
                 <h2 class="text-xs sm:text-[15px] tracking-[0.1em] sm:tracking-[0.15em] font-light text-[#464646] uppercase">
                     TENTANG CHINTYA INTERIOR
@@ -12,7 +12,6 @@
                             Furniture Custom Terpercaya di Jepara.
                         </h1>
                     </div>
-
                     <div class="flex-1 flex flex-col mt-6 lg:mt-0 text-md sm:text-md font-thin space-y-3 sm:space-y-1.5 text-[#6b6b6b]">
                         <p>Kami adalah studio interior dan furniture custom yang berpengalaman menangani berbagai
                             proyek mulai dari rumah tinggal, kantor, hingga area komersial seperti café dan restoran.
@@ -27,7 +26,7 @@
                 </div>
             </div>
             <div class="w-20 sm:w-30 mt-8 sm:mt-10 mb-8 sm:mb-10 h-0.5 bg-amber-600"></div>
-            <div class="w-full h-60 sm:h-96 md:h-120 lg:h-140 overflow-hidden rounded-t-xl sm:rounded-t-2xl">
+            <div class="w-full relative h-60 sm:h-96 md:h-120 lg:h-140 overflow-hidden rounded-t-xl sm:rounded-t-2xl">
                 <img class="w-full shadow h-full object-cover bg-center" src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=1920&h=1080&fit=crop" alt="">
             </div>
         </div>
