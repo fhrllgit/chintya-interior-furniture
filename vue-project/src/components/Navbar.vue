@@ -13,7 +13,8 @@
                         <button class="cursor-pointer hover:text-[#8B7355] transition-colors">{{ item.name }}</button>
                     </RouterLink>
                 </nav>
-                <div class="md:flex hidden items-center justify-center border-2 border-[#aba8a895] hover:bg-[#8B7355] hover:text-white hover:border-[#8B7355] transition-all w-36 lg:w-40 text-xs lg:text-sm cursor-pointer font-semibold text-center py-2 rounded-3xl">
+                <div
+                    class="md:flex hidden items-center justify-center border-2 border-[#aba8a895] hover:bg-[#8B7355] hover:text-white hover:border-[#8B7355] transition-all w-36 lg:w-40 text-xs lg:text-sm cursor-pointer font-semibold text-center py-2 rounded-3xl">
                     <button class="cursor-pointer">Konsultasi</button>
                 </div>
                 <button @click="toggleMenu" class="md:hidden flex p-2 -mr-2" aria-label="Toggle menu">
@@ -36,11 +37,10 @@
             leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 -translate-y-4">
             <div v-if="isMenuOpen" class="flex md:hidden bg-white shadow-lg fixed top-16 left-0 right-0 z-10 w-full">
                 <nav class="flex flex-col w-full items-center justify-center space-y-4 py-6 px-4">
-                    <div v-for="item in arrNavItems">
-                        <button
-                            class="cursor-pointer w-full text-center py-2 hover:bg-gray-100 rounded-lg transition-colors">{{
-                            item.name }}</button>
-                    </div>
+                    <RouterLink @click="isMenuOpen = false" :key="item.name" :to="item.to" v-for="item in arrNavItems"
+                        class="cursor-pointer w-full text-center py-2 hover:bg-gray-100 rounded-lg transition-colors">
+                        {{ item.name }}
+                    </RouterLink>
                     <button
                         class="cursor-pointer w-full max-w-xs border-2 border-[#8B7355] bg-[#8B7355] text-white font-semibold py-3 rounded-3xl mt-4 hover:bg-[#6d5a43] transition-colors">Konsultasi</button>
                 </nav>
