@@ -6,7 +6,9 @@
             </h1>
             <div class="w-20 sm:w-30 mb-3  h-0.5 bg-amber-600"></div>
             <p class="text-sm sm:text-md text-[#6b6b6b] max-w-2xl mx-auto">
-               Anda dapat melihat galeri kami di sini, klik untuk melihat koleksi kami. Anda dapat melihat aktivitas harian kami dan produk-produk yang dibuat oleh Chintya Interior dengan berbagai Customer di seluruh Indonesia.
+                Anda dapat melihat galeri kami di sini, klik untuk melihat koleksi kami. Anda dapat melihat aktivitas
+                harian kami dan produk-produk yang dibuat oleh Chintya Interior dengan berbagai Customer di seluruh
+                Indonesia.
             </p>
         </div>
 
@@ -55,6 +57,7 @@
                 </button>
             </div>
         </Transition>
+
     </div>
 </template>
 

@@ -11,9 +11,7 @@
                     Pilih Layanan Interior & Furniture Sesuai Kebutuhan Anda
                     </h1>
                 </div>
-
-                <div
-                    class="flex-1 flex flex-col mt-6 lg:mt-0 text-md sm:text-md font-thin space-y-3 sm:space-y-1.5 text-[#6b6b6b]">
+                <div class="flex-1 flex flex-col mt-6 lg:mt-0 text-md sm:text-md font-thin space-y-3 sm:space-y-1.5 text-[#6b6b6b]">
                     <p>Chintya Interior menghadirkan solusi interior dan furniture custom yang dirancang sesuai
                         kebutuhan dan karakter ruang Anda. Mulai dari kitchen set, lemari, backdrop TV, hingga furnitur
                         lainnya, kami mengutamakan desain fungsional, material berkualitas, dan pengerjaan yang rapi
@@ -22,7 +20,6 @@
                 </div>
             </div>
             <div class="w-20 sm:w-30 mt-8 sm:mt-10 mb-8 sm:mb-10 h-0.5 bg-amber-600"></div>
-
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
                 <div v-for="service in services" :key="service.id"
                     class="bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer"
@@ -46,8 +43,7 @@
                                 <p class="text-lg sm:text-md font-semibold text-[#8B4513]">
                                     {{ service.price }}
                                 </p>
-                                <button
-                                    class="inline-flex items-center text-[#8B4513] hover:text-[#6B3410] text-sm sm:text-base transition-colors" style="font-weight: 400;">
+                                <button class="inline-flex items-center text-[#8B4513] hover:text-[#6B3410] text-sm sm:text-base transition-colors" style="font-weight: 400;">
                                     Lihat Detail
                                     <svg class="size-3 sm:size-4 ml-2" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
