@@ -3,9 +3,13 @@
         <transition name="slide-down">
             <div v-show="showNavbar"
                 class="flex bg-[#2C1810] md:bg-[#2C1810] text-white fixed top-0 z-90 h-22 py-3 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 w-full items-center justify-between transition-colors duration-300">
-                <div>
-                    <h1 class="text-xl sm:text-2xl md:text-[1.5rem] text-white md:text-white font-serif">Chintya
-                        Furniture</h1>
+                <div class="flex items-center gap-3">
+                    <img class="w-8 h-8 object-contain" src="../assets/img/logoCF.png" alt="">
+                    <div class="sm:flex flex-col hidden">
+                        <h1 class="text-xl sm:text-lg font-semibold md:text-[1.3rem] text-white md:text-white">Chintya
+                            Furniture</h1>
+                            <p class="text-xs text-[#cacaca]">{{ t('title_logo') }}</p>
+                    </div>
                 </div>
                 <nav class="lg:flex hidden items-center gap-6 lg:gap-8 text-sm lg:text-sm">
                     <RouterLink v-for="item in arrNavItems" :to="item.to" :key="item">
@@ -35,6 +39,7 @@
                                 :class="item.code === currenLabel.code
                                     ? 'bg-[#5A3A2A] text-white font-semibold'
                                     : 'bg-[#2C1810] text-white'">
+                                {{ item.icons }}
                                 {{ item.label }}
                                 <svg v-if="item.code === langStore.lang" xmlns="http://www.w3.org/2000/svg"
                                     fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"
@@ -123,11 +128,11 @@
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                     </svg>
-                    <input type="text" placeholder="Cari produk, layanan..."
+                    <input type="text" :placeholder="t('search')"
                         class="w-full h-full placeholder:text-sm text-[#ffffff85] bg-transparent placeholder:text-[#ffffff85]  outline-none" />
                 </div>
                 <span @click="isSearch = false" style="font-weight: 500;"
-                    class="h-13 w-18 text-sm hover:text-white hover:bg-[#ffffff23] cursor-pointer text-[#ffffff85] flex items-center justify-center bg-[#706f6e45] rounded-4xl">Batal</span>
+                    class="h-13 w-18 text-sm hover:text-white hover:bg-[#ffffff23] cursor-pointer text-[#ffffff85] flex items-center justify-center bg-[#706f6e45] rounded-4xl">{{ t('cancel') }}</span>
             </div>
         </transition>
     </header>
@@ -138,6 +143,7 @@ import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLangStore } from '@/stores/lang'
 import { useTranslate } from '@/composables/useTranslate'
+import { Search } from 'lucide-vue-next'
 
 const isMenuOpen = ref(false)
 const showNavbar = ref(true)
@@ -162,8 +168,6 @@ const currenLabel = computed(() =>
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
-
-
 
 const arrNavItems = [
   { key: 'beranda', to: { path: '/', hash: '#beranda' } },

@@ -1,13 +1,13 @@
 <template>
     <div class="relative w-full bg-[#2C1810] md:min-h-screen">
-        <div class="flex pb-0 lg:pb-32 z-20  flex-col lg:flex-row">
-            <!-- LEFT SECTION -->
+        <div class="flex pb-0 lg:pb-32 z-20 flex-col lg:flex-row">
+            <!-- LEFT -->
             <div class="lg:flex-1 lg:items-center lg:justify-center flex-col bg-transparent flex px-6 py-16 sm:px-10 lg:px-16 lg:py-20">
                 <div class="w-full items-center justify-center mb-10 flex lg:hidden">
-                    <div class="relative mt-5  w-full max-w-60 sm:max-w-lg overflow-hidden">
-                        <img 
-                            class="w-full h-60 sm:h-100 object-cover" 
-                            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80" 
+                    <div class="relative mt-5 w-full max-w-60 sm:max-w-lg overflow-hidden">
+                        <img
+                            class="w-full h-60 sm:h-100 object-cover"
+                            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80"
                             alt="Modern Interior Design"
                         />
                     </div>
@@ -16,44 +16,47 @@
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-0.5 bg-white"></div>
                         <h2 class="text-[10px] tracking-[0.2em] font-semibold text-white uppercase">
-                            Chintya Interior & Furniture
+                            {{ t('home_subtitle') }}
                         </h2>
                     </div>
-                    <!-- LG -->
-                    <h1 class="text-3xl hidden lg:block sm:text-4xl lg:text-5xl leading-tight text-white font-light" 
+                    <h1
+                        class="text-3xl hidden lg:block sm:text-4xl lg:text-5xl leading-tight text-white font-light"
                         style="font-family: Georgia, serif;">
-                        Jasa Pembuatan Interior &
-                        Furniture Custom
-                        Berkualitas
+                        {{ t('home_title') }}
                     </h1>
-                    <!-- < LG -->
-                    <h1 class="text-2xl block lg:hidden sm:text-4xl lg:text-5xl leading-tight text-white font-light" 
+                    <h1
+                        class="text-2xl block lg:hidden sm:text-4xl lg:text-5xl leading-tight text-white font-light"
                         style="font-family: Georgia, serif;">
-                        Jasa Pembuatan Interior &
-                        Furniture <br> Custom
-                        Berkualitas
+                        {{ t('home_title') }}
                     </h1>
-                    <p class="text-sm max-w-lg sm:text-base text-gray-300 leading-relaxed" 
-                       style="font-family: Georgia, serif;">
-                        Wujudkan hunian impian Anda dengan desain profesional
-                        bersama Chintya Interior & Furniture.
+                    <p
+                        class="text-sm max-w-lg sm:text-base text-gray-300 leading-relaxed"
+                        style="font-family: Georgia, serif;">
+                        {{ t('home_desc') }}
                     </p>
-                    <!-- CTA -->
-                      <div class="flex flex-col sm:flex-row gap-3 pt-2">
-                        <button class="group cursor-pointer relative overflow-hidden w-full sm:w-auto sm:px-8 py-2.5 px-5 rounded-full bg-white text-black text-sm font-medium transition-all duration-300 hover:bg-gray-100">
-                            <span class="relative z-10">Konsultasi Sekarang</span>
+                    <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                        <button
+                            class="group cursor-pointer relative overflow-hidden w-full sm:w-auto sm:px-8 py-2.5 px-5 rounded-full bg-white text-black text-sm font-medium transition-all duration-300 hover:bg-gray-100">
+                            <span class="relative z-10">
+                                {{ t('btn_consult') }}
+                            </span>
                         </button>
-                        <button class="group cursor-pointer w-full sm:w-auto sm:px-8 py-2.5 px-5 rounded-full border border-white text-white text-sm font-medium transition-all duration-300 hover:bg-white hover:text-black flex items-center justify-center gap-2">
-                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+
+                        <button
+                            class="group cursor-pointer w-full sm:w-auto sm:px-8 py-2.5 px-5 rounded-full border border-white text-white text-sm font-medium transition-all duration-300 hover:bg-white hover:text-black flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
                             </svg>
-                            <span>Lihat Portofolio</span>
+                            <span>{{ t('btn_portfolio') }}</span>
                         </button>
                     </div>
-                    <!-- Social Media -->
+
                     <div class="space-y-2 pt-4">
                         <p class="text-[10px] tracking-[0.15em] text-gray-400 font-medium uppercase">
-                            Lihat Karya Terbaru Kami
+                            {{ t('home_social') }}
                         </p>
                         <div class="flex text-white items-center gap-3">
                             <svg class="w-5 h-5 hover:text-gray-300 transition-colors cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -67,27 +70,30 @@
                             </svg>
                         </div>
                     </div>
+
                 </div>
             </div>
-
             <!-- RIGHT -->
             <div class="flex-1 hidden lg:flex relative min-h-screen items-center justify-center py-20 pr-8">
                 <div class="relative w-full h-full max-h-[700px] rounded-bl-[6rem] overflow-hidden">
-                    <img 
+                    <img
                         src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80"
                         alt="Luxury modern living room"
-                        class="w-full h-full object-cover" 
-                        loading="lazy" 
+                        class="w-full h-full object-cover"
+                        loading="lazy"
                     />
                 </div>
             </div>
         </div>
+
         <div class="absolute z-20 left-0 bottom-0 w-full">
-            <img class="" src="../../../src/assets/img/svgwave.png" alt="">
+            <img src="../../../src/assets/img/svgwave.png" alt="">
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { useTranslate } from '@/composables/useTranslate'
+
+const { t } = useTranslate()
 </script>

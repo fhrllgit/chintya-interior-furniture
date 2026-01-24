@@ -5,6 +5,7 @@ export const useLangStore = defineStore('lang', () => {
   const lang = ref(localStorage.getItem('lang') || 'id')
 
   const setLang = (code) => {
+    if (lang.value === code) return
     lang.value = code
   }
 
