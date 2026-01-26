@@ -14,9 +14,11 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.2.0",
     "@tailwindcss/vite": "^4.1.18",
     "lucide-vue-next": "^0.562.0",
     "pinia": "^3.0.4",
+    "simple-icons": "^16.6.1",
     "tailwindcss": "^4.1.18",
     "vue": "^3.5.25",
     "vue-router": "^4.6.3"

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <Navbar />
   <Home id="beranda" />
   <MiniTipe />
@@ -35,4 +35,5 @@ import Ratting from './components/common/ratting.vue';
 import Footer from './components/footer.vue';
 import Contact from './components/contact.vue';
 
-</script>
+</script> -->
+<template></template>

@@ -1,6 +1,6 @@
 <template>
     <div class="h-full flex items-center justify-center min-h-screen">
-        <div class="px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32  sm:py-12 w-full h-full">
+        <div class="px-4 mt-22 sm:px-6 md:px-10 lg:px-20 xl:px-32  sm:py-12 w-full h-full">
             <div class="flex w-full flex-col">
                 <h2 class="text-xs sm:text-[15px] tracking-[0.1em] sm:tracking-[0.15em] font-light text-[#464646] uppercase">
                     TENTANG CHINTYA INTERIOR

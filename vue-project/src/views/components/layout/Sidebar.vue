@@ -4,7 +4,7 @@
             <div v-show="showNavbar"
                 class="flex bg-[#2C1810] md:bg-[#2C1810] text-white fixed top-0 z-90 h-17 sm:h-22 py-3 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 w-full items-center justify-between transition-colors duration-300">
                 <div class="flex items-center gap-3">
-                    <img class="sm:w-8 sm:h-8 w-6 h-6 object-contain" src="../assets/img/logoCF.png" alt="">
+                    <img class="sm:w-8 sm:h-8 w-6 h-6 object-contain" :src="logoCF" alt="">
                     <div class="sm:flex flex-col hidden">
                         <h1 class="text-xl sm:text-lg font-semibold md:text-[1.2rem] text-white md:text-white">Chintya
                             Furniture</h1>
@@ -100,7 +100,7 @@
                     </RouterLink>
                 </nav>
                 <div class="items-center justify-center px-4 sm:px-8">
-                    <div class="flex gap-5 w-full border py-3 border-t-[#5A3A2A]">
+                    <div class="flex gap-5 w-full border-t py-3 border-t-[#5A3A2A]">
                         <button v-for="item in languages" :key="item.code" @click="changeLanguage(item.code)"
                             class="w-full gap-3  flex flex-1 rounded-2xl justify-center items-center px-4 py-4 cursor-pointer text-left text-sm transition"
                             :class="item.code === currenLabel.code
@@ -146,6 +146,7 @@ import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLangStore } from '@/stores/lang'
 import { useTranslate } from '@/composables/useTranslate'
+import logoCF from '@/assets/img/logoCF.png'
 
 const isMenuOpen = ref(false)
 const showNavbar = ref(true)
@@ -173,12 +174,12 @@ const toggleMenu = () => {
 }
 
 const arrNavItems = [
-    { key: 'beranda', to: { path: '/', hash: '#beranda' } },
-    { key: 'tentang', to: { path: '/', hash: '#tentang-kami' } },
-    { key: 'galeri', to: { path: '/', hash: '#galeri' } },
-    { key: 'layanan', to: { path: '/', hash: '#layanan' } },
-    { key: 'blog', to: { path: '/', hash: '#blog' } },
-    { key: 'kontak', to: { path: '/', hash: '#kontak' } },
+    { key: 'beranda', to: '/beranda' },
+    { key: 'tentang', to: '/tentang' },
+    { key: 'galeri', to: '/galeri' },
+    { key: 'layanan', to: '/layanan' },
+    { key: 'blog', to: '/blog' },
+    { key: 'kontak', to: '/kontak' },
 ]
 </script>
 
