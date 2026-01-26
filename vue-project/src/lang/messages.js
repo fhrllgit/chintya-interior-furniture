@@ -69,7 +69,7 @@ export const messages = {
     price_plan_basic_price: 'Mulai 5 Juta',
     price_plan_basic_original: 'Mulai 7 Juta',
     price_plan_basic_desc:
-      'Cocok untuk pembuatan 1–2 item furniture custom dengan desain simpel dan material berkualitas.',
+      'Cocok untuk 1–2 item interior/furniture custom desain simpel dengan material berkualitas, luasan hingga ±3 m².',
     price_plan_basic_feature_1: 'Desain furniture custom',
     price_plan_basic_feature_2: 'Material kayu pilihan',
     price_plan_basic_feature_3: 'Finishing HPL / Duco',
@@ -82,7 +82,7 @@ export const messages = {
     price_plan_pro_subtitle: 'Solusi interior profesional',
     price_plan_pro_price: 'Mulai 20 Juta',
     price_plan_pro_original: 'Mulai 27 Juta',
-    price_plan_pro_desc: 'Paket ideal untuk interior rumah dengan kebutuhan lebih kompleks.',
+    price_plan_pro_desc: 'Solusi ideal untuk interior/furniture rumah dengan desain lebih kompleks dan detail, luasan pengerjaan hingga ±11 m²',
     price_plan_pro_feature_1: 'Desain interior 2 ruangan',
     price_plan_pro_feature_2: 'Material premium',
     price_plan_pro_feature_3: 'Finishing premium',
@@ -96,7 +96,7 @@ export const messages = {
     price_plan_full_badge: 'Premium Package',
     price_plan_full_subtitle: 'Interior custom menyeluruh',
     price_plan_full_price: 'Mulai 35 Juta',
-    price_plan_full_desc: 'Untuk proyek interior menyeluruh dengan kualitas dan detail maksimal.',
+    price_plan_full_desc: 'Solusi untuk proyek interior/furniture menyeluruh dengan kualitas dan detail maksimal, mencakup berbagai item custom hingga ±19 m².',
     price_plan_full_feature_1: 'Desain interior full custom',
     price_plan_full_feature_2: 'Material & hardware import',
     price_plan_full_feature_3: 'Tim khusus & QC',
@@ -177,7 +177,7 @@ export const messages = {
     price_plan_basic_price: 'From 5 Million',
     price_plan_basic_original: 'From 7 Million',
     price_plan_basic_desc:
-      'Ideal for 1–2 custom furniture items with simple design and quality materials.',
+      'Suitable for 1–2 custom interior/furniture items with simple designs using quality materials, with an area of ​​up to ±3 m².',
     price_plan_basic_feature_1: 'Custom furniture design',
     price_plan_basic_feature_2: 'Selected wood materials',
     price_plan_basic_feature_3: 'HPL / Duco finishing',
@@ -191,7 +191,7 @@ export const messages = {
     price_plan_pro_price: 'From 20 Million',
     price_plan_pro_original: 'From 27 Million',
     price_plan_pro_desc:
-      'An ideal package for residential interiors with more complex requirements.',
+      'The ideal solution for home interiors/furniture with more complex and detailed designs, with a work area of ​​up to ±11 m²',
     price_plan_pro_feature_1: 'Interior design for 2 rooms',
     price_plan_pro_feature_2: 'Premium materials',
     price_plan_pro_feature_3: 'Premium finishing',
@@ -206,7 +206,7 @@ export const messages = {
     price_plan_full_subtitle: 'Complete custom interior solution',
     price_plan_full_price: 'From 35 Million',
     price_plan_full_desc:
-      'Designed for full interior projects with maximum quality, detail, and customization.',
+      'Solutions for comprehensive interior/furniture projects with maximum quality and detail, covering various custom items up to ±19 m².',
     price_plan_full_feature_1: 'Full custom interior design',
     price_plan_full_feature_2: 'Imported materials & hardware',
     price_plan_full_feature_3: 'Dedicated team & quality control',
