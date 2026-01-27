@@ -13,11 +13,11 @@
 
 <script setup>
     import { ref } from 'vue';
+    import backdrop from '@/assets/img/codeBackdropTV.jpg';
+    import lemari from '@/assets/img/27012026almari.jpg'
     import kursi from '@/assets/img/kursi.png';
     import Meja from '@/assets/img/meja.png';
     import tempatTidur from '@/assets/img/tempatTidur.jpg';
-    import lemari from '@/assets/img/lemari.jpg';
-    import backdrop from '@/assets/img/backdrop.jpg';
     import custom from '@/assets/img/custom.jpg';
     import { useTranslate } from '@/composables/useTranslate'
 

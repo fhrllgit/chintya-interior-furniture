@@ -1,5 +1,5 @@
 <template>
-    <div class="px-4 h-full mt-6 w-full sm:px-6 md:px-10 lg:px-20 xl:px-40 py-15">
+    <div class="h-full mt-6 w-full px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 py-15">
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-5">
             <div v-for="item in arrItems" :key="item.name" class="bg-white justify-center rounded-2xl shadow p-4 sm:p-5 flex flex-col items-center space-y-3 sm:space-y-5">
                 <div class="w-16 h-16 sm:w-20 sm:h-20 overflow-hidden rounded-xl">
@@ -17,7 +17,7 @@
     import Meja from '@/assets/img/meja.png';
     import tempatTidur from '@/assets/img/tempatTidur.jpg';
     import lemari from '@/assets/img/lemari.jpg';
-    import backdrop from '@/assets/img/backdrop.jpg';
+    import backdrop from '@/assets/img/codeBackdropTV.jpg';
     import custom from '@/assets/img/custom.jpg';
 
 const arrItems = [

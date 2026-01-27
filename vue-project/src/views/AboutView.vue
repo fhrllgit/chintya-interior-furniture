@@ -1,189 +1,104 @@
 <template>
-  <section class="bg-gray-50 py-16 md:py-24">
-    <div class="px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32">
-      <!-- Badge -->
-      <div class="flex justify-center mb-6">
-        <span class="inline-block px-6 py-2.5 rounded-full text-white text-sm font-semibold"
-          style="background-color: #2C1810;">
-          Pilar Layanan Kami
-        </span>
-      </div>
-
+  <section class="bg-gray-50 min-h-screen py-16 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32">
+    <div class="max-w-7xl mx-auto">
       <!-- Header -->
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-3" style="color: #1a1a1a;">
-          Solusi Interior & Furniture Terpercaya.
-        </h1>
-        <p class="text-gray-600 text-sm md:text-base leading-relaxed">
-          Kami menyediakan berbagai layanan interior dan furniture custom yang dirancang khusus untuk memenuhi kebutuhan
-          rumah, kantor, dan komersial Anda dengan kualitas terbaik.
-        </p>
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-12">
+        <div class="flex-1">
+          <span class="inline-block bg-[#2C1810] text-white px-5 py-2.5 rounded-full text-sm font-semibold mb-5 shadow-lg">
+            Insight & Artikel
+          </span>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a0f0a] mb-4 leading-tight">
+            Bagi pengetahuan, dorong inovasi.
+          </h1>
+          <p class="text-[#2C1810]/70 text-base sm:text-lg max-w-3xl leading-relaxed">
+            Arsip pemikiran kami tentang strategi konten, arsitektur teknologi, dan cara tim digital bergerak
+            lincah dalam menghadirkan pengalaman web yang relevan.
+          </p>
+        </div>
+        <button class="bg-[#2C1810] text-white px-7 py-3.5 rounded-full font-semibold hover:bg-[#1a0f0a] transition-all duration-300 whitespace-nowrap shadow-lg hover:shadow-xl hover:scale-105">
+          Lihat semua artikel
+        </button>
       </div>
 
-      <!-- Content: Logo + Services -->
-      <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-start">
-        <!-- Left: Logo/Image -->
-        <div class="flex-1 w-full lg:w-auto flex justify-center lg:justify-start">
-          <div class="w-full max-w-md lg:max-w-none lg:sticky lg:top-8">
-            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-200">
-              <div class="flex items-center justify-center" style="color: #2C1810;">
-                <svg class="w-48 h-48 md:w-64 md:h-64" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-              </div>
-              <div class="text-center mt-6">
-                <h3 class="text-xl md:text-2xl font-bold mb-2" style="color: #2C1810;">
-                  Chintya Interior
-                </h3>
-                <p class="text-gray-600 text-sm">
-                  Furniture & Interior Design
-                </p>
-              </div>
-            </div>
+      <!-- Articles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <article 
+          v-for="article in arrArtikel" 
+          :key="article.id"
+          class="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 hover:scale-[1.03] hover:-translate-y-2 group cursor-pointer"
+        >
+          <!-- Image Container -->
+          <div class="relative overflow-hidden aspect-[16/10] bg-gradient-to-br from-gray-100 to-gray-200">
+            <img 
+              :src="article.image" 
+              :alt="currentLang === 'id' ? article.title.id : article.title.en"
+              class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 group-hover:brightness-95"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
-        </div>
 
-        <!-- Right: Services Cards -->
-        <div class="flex-1 w-full space-y-5">
-          <div v-for="(service, index) in services" :key="index"
-            class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
-            <div class="flex items-start gap-4">
-              <!-- Icon -->
-              <div class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center"
-                style="background-color: #2C1810;">
-                <component :is="service.icon" class="w-6 h-6 md:w-7 md:h-7 text-white" />
-              </div>
-
-              <!-- Content -->
-              <div class="flex-1">
-                <h3 class="text-base md:text-lg font-bold mb-2" style="color: #1a1a1a;">
-                  {{ service.title }}
-                </h3>
-                <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-3">
-                  {{ service.description }}
-                </p>
-
-                <!-- Features List -->
-                <ul class="space-y-1.5 mb-4">
-                  <li v-for="(feature, idx) in service.features" :key="idx"
-                    class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
-                    <svg class="w-3.5 h-3.5 flex-shrink-0" style="color: #2C1810;" fill="currentColor"
-                      viewBox="0 0 20 20">
-                      <path fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd" />
-                    </svg>
-                    <span>{{ feature }}</span>
-                  </li>
-                </ul>
-
-                <!-- Lihat Detail Link -->
-                <a href="#"
-                  class="inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold transition-all duration-300 hover:gap-2.5"
-                  style="color: #2C1810;">
-                  <span>Lihat Detail</span>
-                  <ArrowBigRightDash class="w-4 h-4" />
-                </a>
-              </div>
+          <!-- Content -->
+          <div class="p-7 space-y-4">
+            <!-- Title -->
+            <h3 class="text-[1.35rem] leading-[1.35] font-bold text-[#1a0f0a] group-hover:text-[#2C1810] transition-colors duration-300 min-h-[3.6rem]">
+              {{ currentLang === 'id' ? article.title.id : article.title.en }}
+            </h3>
+            
+            <!-- Date with Icon -->
+            <div class="flex items-center gap-2 text-[#2C1810]/60 text-sm font-medium">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>{{ currentLang === 'id' ? article.date.id : article.date.en }}</span>
             </div>
+
+            <!-- Description -->
+            <p class="text-gray-600 text-[0.95rem] leading-[1.7] line-clamp-2 min-h-[3.4rem]">
+              {{ currentLang === 'id' ? article.description.id : article.description.en }}
+            </p>
+            
+            <!-- Read More Link -->
+            <a 
+              href="#" 
+              class="inline-flex items-center gap-2.5 text-[#2C1810] font-semibold text-[0.95rem] pt-2 hover:gap-4 transition-all duration-300 group/link"
+            >
+              <span class="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#2C1810] after:transition-all after:duration-300 group-hover/link:after:w-full">
+                Baca selengkapnya
+              </span>
+              <span class="text-xl group-hover/link:translate-x-1.5 transition-transform duration-300">→</span>
+            </a>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import {
-  ArrowRight,
-  CookingPot,
-  BedDouble,
-  Sofa,
-  Briefcase,
-  PanelsTopLeft,
-  Wrench,
-  ArrowBigRightDash
-} from 'lucide-vue-next'
+import { ref, onMounted, computed } from 'vue'
+import dataArtikel from '@/data/data.artikel'
+import { ArrowLeft } from 'lucide-vue-next'
+import { useRouter } from 'vue-router'
+import { useLangStore } from '@/stores/lang'
+import { useTranslate } from '@/composables/useTranslate'
 
-const services = ref([
-  {
-    id: 1,
-    icon: CookingPot,
-    title: 'Kitchen Set',
-    description: 'Dapur custom yang fungsional dan estetik dengan material berkualitas tinggi dan desain modern.',
-    features: [
-      'Custom cabinet & storage solution',
-      'Material HPL premium atau duco',
-      'Hardware & aksesoris berkualitas',
-      'Instalasi profesional'
-    ]
-  },
-  {
-    id: 2,
-    icon: BedDouble,
-    title: 'Bedroom Set',
-    description: 'Furniture kamar tidur lengkap yang nyaman dan elegan sesuai gaya hidup Anda.',
-    features: [
-      'Lemari pakaian custom',
-      'Tempat tidur & nakas',
-      'Meja rias & cermin',
-      'Finishing premium pilihan'
-    ]
-  },
-  {
-    id: 3,
-    icon: Sofa,
-    title: 'Living Room',
-    description: 'Ruang tamu yang memukau dengan furniture modern dan space-saving design.',
-    features: [
-      'TV cabinet & display unit',
-      'Coffee table & side table',
-      'Rak buku & penyimpanan',
-      'Seating area custom'
-    ]
-  },
-  {
-    id: 4,
-    icon: Briefcase,
-    title: 'Home Office & Workspace',
-    description: 'Ruang kerja produktif dengan furniture ergonomis dan storage maksimal.',
-    features: [
-      'Meja kerja custom size',
-      'Rak & filing cabinet',
-      'Cable management system',
-      'Pencahayaan optimal'
-    ]
-  },
-  {
-    id: 5,
-    icon: PanelsTopLeft,
-    title: 'Backdrop & Wall Panel',
-    description: 'Backdrop dekoratif yang mempercantik ruangan dengan material dan design pilihan.',
-    features: [
-      '3D wall panel',
-      'TV backdrop custom',
-      'Feature wall design',
-      'Material HPL, wallpaper, kayu'
-    ]
-  },
-  {
-    id: 6,
-    icon: Wrench,
-    title: 'Custom Furniture',
-    description: 'Furniture custom sesuai kebutuhan spesifik dengan desain unik dan fungsional.',
-    features: [
-      'Konsultasi desain gratis',
-      'Berbagai pilihan material',
-      'Ukuran & bentuk custom',
-      'Quality control ketat'
-    ]
-  }
-])
+const { t } = useTranslate()
+const router = useRouter()
+const langStore = useLangStore()
+const currentLang = computed(() => langStore.lang)
+const arrArtikel = ref([])
+
+onMounted(() => {
+  const shuffled = [...dataArtikel].sort(() => 0.5 - Math.random())
+  arrArtikel.value = shuffled.slice(0, 3)
+})
 </script>
 
-
 <style scoped>
-/* No additional styles needed */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 </style>

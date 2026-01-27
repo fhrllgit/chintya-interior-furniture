@@ -42,9 +42,9 @@
       </div>
 
     <div class="flex w-full gap-5 items-center justify-center">
-      <button class="text-sm text-[#2C1810] cursor-pointer" style="font-weight: 700;">{{ t('advantage_btn_portfolio') }}</button>
+      <button @click="router.push('/galeri')" class="text-sm text-[#2C1810] cursor-pointer" style="font-weight: 700;">{{ t('advantage_btn_portfolio') }}</button>
       <span class="text-[#cacaca]">|</span>
-      <button class="text-sm text-[#2C1810] cursor-pointer" style="font-weight: 700;">{{ t('advantage_btn_contact') }}</button>
+      <button @click="router.push('/kontak')" class="text-sm text-[#2C1810] cursor-pointer" style="font-weight: 700;">{{ t('advantage_btn_contact') }}</button>
     </div>
     </div>
   </section>
@@ -53,7 +53,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useTranslate } from '@/composables/useTranslate'
-
+import { useRouter } from 'vue-router'
 import {
   SparklesIcon,
   UsersIcon,
@@ -64,6 +64,7 @@ import {
 } from '@heroicons/vue/24/outline'
 
 const { t } = useTranslate()
+const router = useRouter()
 
 const sliderRef = ref(null)
 const currentPage = ref(0)

@@ -30,7 +30,7 @@ export const messages = {
     advantage_desc:
       'Kami menghadirkan solusi interior yang tidak hanya cepat dan aman, tetapi juga dirancang untuk memberikan pengalaman terbaik bagi pengguna dan kesuksesan bisnis Anda.',
     // CTA
-    advantage_btn_portfolio: 'Lihat Portofolio',
+    advantage_btn_portfolio: 'Lihat Galeri',
     advantage_btn_contact: 'Hubungi Kami',
     // Cards
     advantage_card_1_title: 'Desain Custom 20+ Tahun',
@@ -69,7 +69,7 @@ export const messages = {
     price_plan_basic_price: 'Mulai 5 Juta',
     price_plan_basic_original: 'Mulai 7 Juta',
     price_plan_basic_desc:
-      'Cocok untuk 1–2 item interior/furniture custom desain simpel dengan material berkualitas, luasan hingga ±3 m².',
+      'Cocok untuk 1–2 item interior/furniture custom desain simpel dengan material berkualitas, luasan hingga ±2.5 m.',
     price_plan_basic_feature_1: 'Desain furniture custom',
     price_plan_basic_feature_2: 'Material kayu pilihan',
     price_plan_basic_feature_3: 'Finishing HPL / Duco',
@@ -82,7 +82,8 @@ export const messages = {
     price_plan_pro_subtitle: 'Solusi interior profesional',
     price_plan_pro_price: 'Mulai 20 Juta',
     price_plan_pro_original: 'Mulai 27 Juta',
-    price_plan_pro_desc: 'Solusi ideal untuk interior/furniture rumah dengan desain lebih kompleks dan detail, luasan pengerjaan hingga ±11 m²',
+    price_plan_pro_desc:
+      'Solusi ideal untuk interior/furniture rumah dengan desain lebih kompleks dan detail, luasan pengerjaan hingga ±11 m',
     price_plan_pro_feature_1: 'Desain interior 2 ruangan',
     price_plan_pro_feature_2: 'Material premium',
     price_plan_pro_feature_3: 'Finishing premium',
@@ -96,7 +97,8 @@ export const messages = {
     price_plan_full_badge: 'Premium Package',
     price_plan_full_subtitle: 'Interior custom menyeluruh',
     price_plan_full_price: 'Mulai 35 Juta',
-    price_plan_full_desc: 'Solusi untuk proyek interior/furniture menyeluruh dengan kualitas dan detail maksimal, mencakup berbagai item custom hingga ±19 m².',
+    price_plan_full_desc:
+      'Solusi untuk proyek interior/furniture menyeluruh dengan kualitas dan detail maksimal, mencakup berbagai item custom hingga ±19 m.',
     price_plan_full_feature_1: 'Desain interior full custom',
     price_plan_full_feature_2: 'Material & hardware import',
     price_plan_full_feature_3: 'Tim khusus & QC',
@@ -105,6 +107,68 @@ export const messages = {
     price_plan_full_feature_6: 'Maintenance prioritas',
     price_plan_full_feature_7: 'Garansi hingga 3 tahun',
     price_plan_full_cta: 'Konsultasi Paket Full',
+
+    // Home / Pilar layanan
+    service_badge: 'Pilar Layanan Kami',
+    service_title: 'Solusi Interior & Furniture Terpercaya.',
+    service_desc:
+      'Kami menyediakan berbagai layanan interior dan furniture custom yang dirancang khusus untuk memenuhi kebutuhan rumah, kantor, dan komersial Anda dengan kualitas terbaik.',
+
+    service_kitchen_title: 'Kitchen Set',
+    service_kitchen_desc:
+      'Dapur custom yang fungsional dan estetik dengan material berkualitas tinggi dan desain modern.',
+    service_kitchen_feature_1: 'Kabinet & penyimpanan custom',
+    service_kitchen_feature_2: 'Material HPL premium atau duco',
+    service_kitchen_feature_3: 'Hardware & aksesoris berkualitas',
+    service_kitchen_feature_4: 'Instalasi profesional',
+
+    service_bedroom_title: 'Bedroom Set',
+    service_bedroom_desc:
+      'Furniture kamar tidur lengkap yang nyaman dan elegan sesuai gaya hidup Anda.',
+    service_bedroom_feature_1: 'Lemari pakaian custom',
+    service_bedroom_feature_2: 'Tempat tidur & nakas',
+    service_bedroom_feature_3: 'Meja rias & cermin',
+    service_bedroom_feature_4: 'Pilihan finishing premium',
+
+    service_living_title: 'Living Room',
+    service_living_desc: 'Ruang tamu yang memukau dengan furniture modern dan desain hemat ruang.',
+    service_living_feature_1: 'TV cabinet & display',
+    service_living_feature_2: 'Meja tamu & meja samping',
+    service_living_feature_3: 'Rak buku & penyimpanan',
+    service_living_feature_4: 'Area duduk custom',
+
+    service_office_title: 'Home Office & Workspace',
+    service_office_desc:
+      'Ruang kerja produktif dengan furniture ergonomis dan sistem penyimpanan maksimal.',
+    service_office_feature_1: 'Meja kerja custom',
+    service_office_feature_2: 'Rak & filing cabinet',
+    service_office_feature_3: 'Manajemen kabel rapi',
+    service_office_feature_4: 'Pencahayaan optimal',
+
+    service_backdrop_title: 'Backdrop & Wall Panel',
+    service_backdrop_desc:
+      'Backdrop dekoratif untuk mempercantik ruangan dengan material dan desain pilihan.',
+    service_backdrop_feature_1: 'Panel dinding 3D',
+    service_backdrop_feature_2: 'Backdrop TV custom',
+    service_backdrop_feature_3: 'Feature wall design',
+    service_backdrop_feature_4: 'Material HPL, wallpaper, kayu',
+
+    service_custom_title: 'Custom Furniture',
+    service_custom_desc:
+      'Furniture custom sesuai kebutuhan spesifik dengan desain unik dan fungsional.',
+    service_custom_feature_1: 'Konsultasi desain gratis',
+    service_custom_feature_2: 'Pilihan material lengkap',
+    service_custom_feature_3: 'Ukuran & bentuk custom',
+    service_custom_feature_4: 'Quality control ketat',
+
+    service_detail: 'Lihat Detail',
+
+    // Poin Portofolio
+    point_portfolio_badge: 'Studi Kasus Terbaru',
+    point_portfolio_title: 'Portofolio dengan brief nyata & hasil terukur.',
+    point_portfolio_desc: 'Data ditampilkan dari dashboard admin, meliputi judul, kategori, tanggal publikasi, dan konten deskriptif, dengan tampilan konsisten sesuai desain Chintya Interior Furniture.',
+    point_button_view_gallery: 'Lihat Semua Galeri',
+    point_button_detail_case: 'Detail proyek',
   },
   en: {
     title_logo: 'Quality interior and furniture manufacturing services',
@@ -137,7 +201,7 @@ export const messages = {
     advantage_desc:
       'We deliver interior solutions that are not only fast and secure, but also designed to provide the best experience for users and long-term business success.',
     // CTA
-    advantage_btn_portfolio: 'View Portfolio',
+    advantage_btn_portfolio: 'View Gallery',
     advantage_btn_contact: 'Contact Us',
     // Cards
     advantage_card_1_title: '20+ Years Custom Design',
@@ -177,7 +241,7 @@ export const messages = {
     price_plan_basic_price: 'From 5 Million',
     price_plan_basic_original: 'From 7 Million',
     price_plan_basic_desc:
-      'Suitable for 1–2 custom interior/furniture items with simple designs using quality materials, with an area of ​​up to ±3 m².',
+      'Suitable for 1–2 custom interior/furniture items with simple designs using quality materials, with an area of ​​up to ±2.5 m.',
     price_plan_basic_feature_1: 'Custom furniture design',
     price_plan_basic_feature_2: 'Selected wood materials',
     price_plan_basic_feature_3: 'HPL / Duco finishing',
@@ -191,7 +255,7 @@ export const messages = {
     price_plan_pro_price: 'From 20 Million',
     price_plan_pro_original: 'From 27 Million',
     price_plan_pro_desc:
-      'The ideal solution for home interiors/furniture with more complex and detailed designs, with a work area of ​​up to ±11 m²',
+      'The ideal solution for home interiors/furniture with more complex and detailed designs, with a work area of ​​up to ±11 m',
     price_plan_pro_feature_1: 'Interior design for 2 rooms',
     price_plan_pro_feature_2: 'Premium materials',
     price_plan_pro_feature_3: 'Premium finishing',
@@ -206,7 +270,7 @@ export const messages = {
     price_plan_full_subtitle: 'Complete custom interior solution',
     price_plan_full_price: 'From 35 Million',
     price_plan_full_desc:
-      'Solutions for comprehensive interior/furniture projects with maximum quality and detail, covering various custom items up to ±19 m².',
+      'Solutions for comprehensive interior/furniture projects with maximum quality and detail, covering various custom items up to ±19 m.',
     price_plan_full_feature_1: 'Full custom interior design',
     price_plan_full_feature_2: 'Imported materials & hardware',
     price_plan_full_feature_3: 'Dedicated team & quality control',
@@ -215,5 +279,65 @@ export const messages = {
     price_plan_full_feature_6: 'Priority maintenance service',
     price_plan_full_feature_7: 'Up to 3-year warranty',
     price_plan_full_cta: 'Consult Full Package',
+    // Home / Pilar layanan
+    service_badge: 'Our Service Pillars',
+    service_title: 'Trusted Interior & Furniture Solutions.',
+    service_desc:
+      'We provide a wide range of custom interior and furniture services designed to meet residential, office, and commercial needs with the highest quality.',
+    service_kitchen_title: 'Kitchen Set',
+    service_kitchen_desc:
+      'Functional and aesthetic custom kitchens using high-quality materials and modern designs.',
+    service_kitchen_feature_1: 'Custom cabinets & storage',
+    service_kitchen_feature_2: 'Premium HPL or duco finish',
+    service_kitchen_feature_3: 'Quality hardware & accessories',
+    service_kitchen_feature_4: 'Professional installation',
+
+    service_bedroom_title: 'Bedroom Set',
+    service_bedroom_desc:
+      'Complete bedroom furniture that is comfortable, elegant, and tailored to your lifestyle.',
+    service_bedroom_feature_1: 'Custom wardrobe',
+    service_bedroom_feature_2: 'Bed & bedside table',
+    service_bedroom_feature_3: 'Vanity table & mirror',
+    service_bedroom_feature_4: 'Premium finishing options',
+
+    service_living_title: 'Living Room',
+    service_living_desc: 'A stunning living room with modern furniture and space-saving designs.',
+    service_living_feature_1: 'TV cabinet & display unit',
+    service_living_feature_2: 'Coffee & side tables',
+    service_living_feature_3: 'Bookshelves & storage',
+    service_living_feature_4: 'Custom seating area',
+
+    service_office_title: 'Home Office & Workspace',
+    service_office_desc:
+      'Productive workspaces with ergonomic furniture and maximum storage efficiency.',
+    service_office_feature_1: 'Custom-sized work desk',
+    service_office_feature_2: 'Shelves & filing cabinets',
+    service_office_feature_3: 'Clean cable management',
+    service_office_feature_4: 'Optimal lighting setup',
+
+    service_backdrop_title: 'Backdrop & Wall Panel',
+    service_backdrop_desc:
+      'Decorative backdrops that enhance your space with selected materials and designs.',
+    service_backdrop_feature_1: '3D wall panels',
+    service_backdrop_feature_2: 'Custom TV backdrop',
+    service_backdrop_feature_3: 'Feature wall design',
+    service_backdrop_feature_4: 'HPL, wallpaper, wood materials',
+
+    service_custom_title: 'Custom Furniture',
+    service_custom_desc:
+      'Custom furniture tailored to specific needs with unique and functional designs.',
+    service_custom_feature_1: 'Free design consultation',
+    service_custom_feature_2: 'Multiple material options',
+    service_custom_feature_3: 'Custom size & shape',
+    service_custom_feature_4: 'Strict quality control',
+
+    service_detail: 'View Details',
+
+    // Poin Portofolio
+    point_portfolio_badge: 'Latest Case Studies',
+    point_portfolio_title: 'Portfolio with real briefs & measurable results.',
+    point_portfolio_desc: 'Data displayed from the admin dashboard, including title, category, publication date, and descriptive content, with a consistent appearance according to Chintya Interior Furniture design.',
+    point_button_view_gallery: 'View All Gallery',
+    point_button_detail_case: 'Project details',
   },
 }

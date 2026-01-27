@@ -29,7 +29,7 @@ const router = createRouter({
       children: [
         { path: 'beranda', component: () => import('@/components/page/Home.vue') },
         { path: 'tentang', component: () => import('@/components/page/About.vue') },
-        { path: 'galeri', component: () => import('@/components/page/Gallery.vue') },
+        { path: 'galeri/:id', component: () => import('@/components/page/Gallery.vue') },
         { path: 'layanan', component: () => import('@/components/page/Service.vue') },
         { path: 'blog', component: () => import('@/components/page/Blog.vue') },
         { path: 'kontak', component: () => import('@/components/page/Contact.vue') },

@@ -176,8 +176,8 @@ const toggleMenu = () => {
 const arrNavItems = [
     { key: 'beranda', to: '/beranda' },
     { key: 'tentang', to: '/tentang' },
-    { key: 'galeri', to: '/galeri' },
     { key: 'layanan', to: '/layanan' },
+    { key: 'galeri', to: '/galeri/:id' },
     { key: 'blog', to: '/blog' },
     { key: 'kontak', to: '/kontak' },
 ]

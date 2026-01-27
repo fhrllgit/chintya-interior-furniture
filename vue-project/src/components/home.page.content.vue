@@ -7,7 +7,7 @@
                     <div class="relative mt-5 w-full max-w-60 sm:max-w-lg overflow-hidden">
                         <img
                             class="w-full h-60 sm:h-100 object-cover"
-                            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80"
+                            :src="imageBeranda"
                             alt="Modern Interior Design"
                         />
                     </div>
@@ -72,7 +72,7 @@
             <div class="flex-1 hidden lg:flex relative min-h-screen items-center justify-center py-20 pr-8">
                 <div class="relative w-full h-full max-h-[700px] rounded-bl-[6rem] overflow-hidden">
                     <img
-                        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80"
+                        :src="imageBeranda"
                         alt="Luxury modern living room"
                         class="w-full h-full object-cover"
                         loading="lazy"
@@ -90,6 +90,7 @@
 <script setup>
 import { useTranslate } from '@/composables/useTranslate'
 import svgwave from '../assets/img/svgwave.png'
+import imageBeranda from '../assets/img/codeBackdropTV.jpg'
 import { EyeIcon } from '@heroicons/vue/24/outline'
 const { t } = useTranslate()
 </script>
