@@ -5,20 +5,19 @@
                 <div class="flex-1">
                     <span
                         class="inline-block text-xs bg-[#2C1810] border border-[#ffffff63] text-white px-4 py-2 rounded-full font-medium mb-5 shadow-lg">
-                        Insight & Artikel
+                        {{ t('article_badge') }}
                     </span>
                     <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black mb-4 leading-tight font-semibold">
-                        Bagi pengetahuan, dorong inovasi.
+                        {{ t('article_title') }}
                     </h1>
                     <p class="text-[#2C1810] text-sm max-w-3xl leading-relaxed">
-                        Arsip pemikiran kami tentang strategi konten, arsitektur teknologi, dan cara tim digital
-                        bergerak
-                        lincah dalam menghadirkan pengalaman web yang relevan.
+                        {{ t('article_desc') }}
                     </p>
                 </div>
                 <button
-                    class="bg-[#2C1810] text-sm text-white px-7 py-3.5 rounded-full cursor-pointer hover:bg-[#1a0f0a] transition-all duration-300 whitespace-nowrap shadow-lg hover:shadow-xl hover:scale-105">
-                    Lihat semua artikel
+                @click="router.push('/blog')"
+                    class="bg-[#2C1810] text-sm text-white px-7 py-3.5 rounded-full cursor-pointer hover:bg-[#1a0f0a] transition-all duration-300 whitespace-nowrap shadow-2xl hover:shadow-xl hover:scale-105">
+                    {{ t('article_button_view_blog') }}
                 </button>
             </div>
 
@@ -26,7 +25,7 @@
                 <article 
                     v-for="article in arrArtikel" 
                     :key="article.id"
-                    class="bg-white rounded-[1.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 hover:scale-[1.03] hover:-translate-y-2 group cursor-pointer">
+                    class="bg-white rounded-[1.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 hover:scale-[1.03] hover:-translate-y-2 group">
                     <div class="relative overflow-hidden aspect-[16/10] bg-gradient-to-br from-gray-100 to-gray-200">
                         <img :src="article.image" :alt="currentLang === 'id' ? article.title.id : article.title.en"
                             class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 group-hover:brightness-95" />
@@ -47,14 +46,14 @@
                             <span>{{ currentLang === 'id' ? article.date.id : article.date.en }}</span>
                         </div>
                         <p class="text-gray-600 text-sm leading-[1.7] line-clamp-2 min-h-[3.4rem]">
-                            {{ currentLang === 'id' ? article.description.id : article.description.en }}
+                            {{ currentLang === 'id' ? article.excerpt.id : article.excerpt.en }}
                         </p>
                         <div class="flex justify-end pt-3 border-t border-[#cacaca]">
-                            <button
-                                class="inline-flex items-center gap-2 text-[#2C1810] font-semibold text-sm hover:gap-4 transition-all group/link">
+                            <button @click="goDetailArtikel(article.id)"
+                                class="inline-flex cursor-pointer items-center gap-2 text-[#2C1810] font-semibold text-sm hover:gap-4 transition-all group/link">
                                 <span
-                                    class="relative text-xs after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#2C1810] group-hover/link:after:w-full after:transition-all">
-                                    Baca Selengkapnya
+                                    class="relative text-sm after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#2C1810] group-hover/link:after:w-full after:transition-all">
+                                    {{ t('article_button_detail_article') }}
                                 </span>
                                 <ArrowLeft
                                     class="w-4 h-4 rotate-180 group-hover/link:translate-x-1 transition-transform" />
@@ -81,10 +80,20 @@ const langStore = useLangStore()
 const currentLang = computed(() => langStore.lang)
 const arrArtikel = ref([])
 
+const goDetailArtikel = (id) => {
+    router.push(`/detail-blog/${id}`)
+}
+
 onMounted(() => {
+  if (Array.isArray(dataArtikel)) {
     const shuffled = [...dataArtikel].sort(() => 0.5 - Math.random())
     arrArtikel.value = shuffled.slice(0, 3)
+  } else {
+    console.error('dataArtikel bukan array:', dataArtikel)
+    arrArtikel.value = []
+  }
 })
+
 </script>
 
 <style scoped>

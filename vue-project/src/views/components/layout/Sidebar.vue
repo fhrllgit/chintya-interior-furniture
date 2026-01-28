@@ -177,7 +177,7 @@ const arrNavItems = [
     { key: 'beranda', to: '/beranda' },
     { key: 'tentang', to: '/tentang' },
     { key: 'layanan', to: '/layanan' },
-    { key: 'galeri', to: '/galeri/:id' },
+    { key: 'galeri', to: '/galeri' },
     { key: 'blog', to: '/blog' },
     { key: 'kontak', to: '/kontak' },
 ]

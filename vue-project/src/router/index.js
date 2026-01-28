@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+// import HomeView from '../views/HomeView.vue'
 import DetailLayanan from '@/views/components/common/DetailLayanan.vue'
-import DetailBlog from '@/views/components/common/DetailBlog.vue'
+// import DetailBlog from '@/views/components/common/DetailBlog.vue'
 import Layout from '@/views/components/layout/Layout.vue'
+import detailBlog from '@/components/common/common.detail.blog.vue'
+import NotFound from '@/views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,23 +20,28 @@ const router = createRouter({
       component: DetailLayanan,
     },
     {
-      path: '/detail-blog/:id',
-      name: 'detail-blog',
-      component: DetailBlog,
-    },
-   {
       path: '/',
       component: Layout,
       redirect: '/beranda',
       children: [
         { path: 'beranda', component: () => import('@/components/page/Home.vue') },
         { path: 'tentang', component: () => import('@/components/page/About.vue') },
-        { path: 'galeri/:id', component: () => import('@/components/page/Gallery.vue') },
+        { path: 'galeri', component: () => import('@/components/page/Gallery.vue') },
         { path: 'layanan', component: () => import('@/components/page/Service.vue') },
         { path: 'blog', component: () => import('@/components/page/Blog.vue') },
         { path: 'kontak', component: () => import('@/components/page/Contact.vue') },
-      ]
-    }
+      ],
+    },
+    {
+      path: '/detail-blog/:id',
+      name: 'detail-blog',
+      component: detailBlog,
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: NotFound,
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

@@ -22,7 +22,8 @@
                     class="bg-white/98 backdrop-blur-sm rounded-[1.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 hover:scale-[1.03] hover:-translate-y-2 group">
                     <div class="relative p-5 pb-0">
                         <span
-                            class="absolute top-8 left-8 z-10 bg-[#2C1810] text-white h-8 px-4 flex items-center rounded-full text-xs font-semibold max-w-[140px] truncate">
+                        style="font-weight: 500;"
+                            class="absolute top-8 left-8 z-10 bg-[#2C1810] text-white h-8 px-4 flex items-center rounded-full text-xs max-w-[140px] truncate">
                             {{ item.category }}
                         </span>
                         <div class="relative rounded-[1.5rem] overflow-hidden aspect-[5/4]">
@@ -34,12 +35,12 @@
                         <h3 style="font-weight: 600;" class="text-[1.1rem] leading-[1.35]  text-black group-hover:text-[#2C1810] transition-colors duration-300 min-h-[3.6rem]">
                             {{ item.title[currentLang] }}
                         </h3>
-                        <p class="text-[#2C1810] text-xs leading-[1.65] line-clamp-4 min-h-[4.5rem]">
+                        <p class="text-[#2C1810] text-sm leading-[1.65] line-clamp-4 min-h-[4.5rem]">
                             {{ item.description[currentLang] }}
                         </p>
                         <div class="flex justify-end pt-3 border-t border-[#cacaca]">
                             <button
-                                class="inline-flex items-center gap-2 text-[#2C1810] font-semibold text-xs hover:gap-4 transition-all group/link">
+                                class="inline-flex cursor-pointer items-center gap-2 text-[#2C1810] font-semibold text-sm hover:gap-4 transition-all group/link">
                                 <span
                                     class="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#2C1810] group-hover/link:after:w-full after:transition-all">
                                     {{ t('point_button_detail_case') }}

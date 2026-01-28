@@ -169,6 +169,13 @@ export const messages = {
     point_portfolio_desc: 'Data ditampilkan dari dashboard admin, meliputi judul, kategori, tanggal publikasi, dan konten deskriptif, dengan tampilan konsisten sesuai desain Chintya Interior Furniture.',
     point_button_view_gallery: 'Lihat Semua Galeri',
     point_button_detail_case: 'Detail proyek',
+
+    // Home / Artikel Terbaru
+    article_badge: 'Insight & Artikel',
+    article_title: 'Wawasan Desain Interior & Furniture',
+    article_desc: 'Rangkaian artikel yang membahas desain interior dan furniture dari sudut pandang fungsi, estetika, serta kualitas material. Ditulis untuk berbagi insight, proses, dan pertimbangan desain dalam menciptakan ruang yang nyaman, efisien, dan bernilai jangka panjang.',
+    article_button_view_blog: 'Lihat Semua Artikel',
+    article_button_detail_article: 'Baca Selengkapnya',
   },
   en: {
     title_logo: 'Quality interior and furniture manufacturing services',
@@ -339,5 +346,12 @@ export const messages = {
     point_portfolio_desc: 'Data displayed from the admin dashboard, including title, category, publication date, and descriptive content, with a consistent appearance according to Chintya Interior Furniture design.',
     point_button_view_gallery: 'View All Gallery',
     point_button_detail_case: 'Project details',
+
+    // Home / Artikel Terbaru
+    article_badge: 'Insights & Articles',
+    article_title: 'Interior Design & Furniture Insights',
+    article_desc: 'A series of articles discussing interior design and furniture from the perspectives of function, aesthetics, and material quality. Written to share design insights, processes, and considerations in creating comfortable, efficient, and long-term valuable spaces.',
+    article_button_view_blog: 'View All Articles',
+    article_button_detail_article: 'Read More',
   },
 }
