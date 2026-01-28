@@ -23,7 +23,8 @@
             </div>
         </div>
 
-        <div class="px-4 md:space-y-6 space-y-4 sm:space-y-5 lg:space-y-8 sm:px-6 mt-6 sm:mt-8 md:px-10 lg:px-20 xl:px-32">
+        <div
+            class="px-4 md:space-y-6 space-y-4 sm:space-y-5 lg:space-y-8 sm:px-6 mt-6 sm:mt-8 md:px-10 lg:px-20 xl:px-32">
             <div class="flex items-center gap-3 sm:gap-4 cursor-pointer" @click="router.push('/blog')">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-5 h-5 sm:w-6 sm:h-6">
@@ -41,7 +42,6 @@
                 {{ currentLang === 'id' ? article.title.id : article.title.en }}
             </h1>
 
-            <!-- Meta Information - Responsive -->
             <div class="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-600">
                 <div class="flex items-center gap-1.5 sm:gap-2">
                     <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,33 +67,24 @@
             </div>
         </div>
 
-        <!-- Main Content - Responsive Grid -->
         <div class="px-4 sm:px-6 mt-5 sm:mt-6 md:px-10 lg:px-20 xl:px-32 pb-12 sm:pb-16">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
-                
-                <!-- Left Content (Article) -->
                 <div class="lg:col-span-8">
-                    <!-- Article Image & Content Card - Responsive -->
                     <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden">
-                        <!-- Featured Image - Responsive -->
                         <div class="relative aspect-video bg-gradient-to-br from-gray-100 to-gray-200">
                             <img :src="article.image" :alt="currentLang === 'id' ? article.title.id : article.title.en"
                                 class="w-full h-full object-cover" />
                         </div>
-
-                        <!-- Article Content - Responsive Padding -->
                         <div class="p-4 sm:p-6 md:p-8 lg:p-10">
                             <div class="prose prose-sm sm:prose-base lg:prose-lg max-w-none article-content"
                                 v-html="formatContent(currentLang === 'id' ? article.content.id : article.content.en)">
                             </div>
                         </div>
                     </div>
-
-                    <!-- Share Buttons Section - Responsive -->
                     <div class="mt-6 sm:mt-8 bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6">
                         <h3 class="text-lg sm:text-xl font-bold text-[#1a0f0a] mb-3 sm:mb-4">Bagikan Artikel</h3>
                         <div class="flex flex-wrap gap-2 sm:gap-3">
-                            <!-- Facebook Button - Responsive -->
+                            <!-- Facebook -->
                             <button @click="shareToFacebook"
                                 class="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-[#1877F2] text-white rounded-full text-sm sm:text-base font-semibold hover:bg-[#0d65d9] transition-all duration-300 hover:scale-105">
                                 <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -102,8 +93,7 @@
                                 </svg>
                                 <span class="hidden sm:inline">Facebook</span>
                             </button>
-
-                            <!-- Twitter Button - Responsive -->
+                            <!-- Twitter -->
                             <button @click="shareToTwitter"
                                 class="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-[#1DA1F2] text-white rounded-full text-sm sm:text-base font-semibold hover:bg-[#0d8dd9] transition-all duration-300 hover:scale-105">
                                 <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -112,8 +102,7 @@
                                 </svg>
                                 <span class="hidden sm:inline">Twitter</span>
                             </button>
-
-                            <!-- LinkedIn Button - Responsive -->
+                            <!-- LinkedIn -->
                             <button @click="shareToLinkedIn"
                                 class="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-[#0A66C2] text-white rounded-full text-sm sm:text-base font-semibold hover:bg-[#004182] transition-all duration-300 hover:scale-105">
                                 <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -122,11 +111,11 @@
                                 </svg>
                                 <span class="hidden sm:inline">LinkedIn</span>
                             </button>
-
-                            <!-- Copy Link Button - Responsive -->
+                            <!-- Copy Link -->
                             <button @click="copyLink"
                                 class="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-gray-200 text-gray-800 rounded-full text-sm sm:text-base font-semibold hover:bg-gray-300 transition-all duration-300 hover:scale-105">
-                                <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                                 </svg>
@@ -136,16 +125,19 @@
                     </div>
 
                     <!-- Related Articles Section - Responsive -->
-                    <div v-if="relatedArticles.length > 0" class="mt-6 sm:mt-8 bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 md:p-8">
+                    <div v-if="relatedArticles.length > 0"
+                        class="mt-6 sm:mt-8 bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 md:p-8">
                         <h3 class="text-xl sm:text-2xl font-bold text-[#1a0f0a] mb-4 sm:mb-6">Artikel Terkait</h3>
-                        <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Baca artikel lainnya yang mungkin menarik untuk Anda</p>
+                        <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Baca artikel lainnya yang mungkin
+                            menarik untuk Anda</p>
 
                         <div class="grid grid-cols-1 gap-4 sm:gap-6">
                             <article v-for="related in relatedArticles" :key="related.id"
                                 @click="navigateToArticle(related.id)" class="group cursor-pointer">
                                 <div class="flex gap-3 sm:gap-4 items-start">
                                     <!-- Thumbnail - Responsive -->
-                                    <div class="flex-shrink-0 w-24 h-20 sm:w-32 sm:h-24 rounded-lg sm:rounded-xl overflow-hidden bg-gray-100">
+                                    <div
+                                        class="flex-shrink-0 w-24 h-20 sm:w-32 sm:h-24 rounded-lg sm:rounded-xl overflow-hidden bg-gray-100">
                                         <img :src="related.image"
                                             :alt="currentLang === 'id' ? related.title.id : related.title.en"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
@@ -157,8 +149,10 @@
                                             class="inline-block bg-gray-100 text-gray-700 px-2.5 sm:px-3 py-1 rounded-full text-xs font-medium mb-1.5 sm:mb-2">
                                             {{ related.category }}
                                         </span>
-                                        <div class="flex items-center gap-1.5 sm:gap-2 text-xs text-gray-500 mb-1.5 sm:mb-2">
-                                            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <div
+                                            class="flex items-center gap-1.5 sm:gap-2 text-xs text-gray-500 mb-1.5 sm:mb-2">
+                                            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                             </svg>
@@ -176,7 +170,8 @@
                                         <button
                                             class="inline-flex items-center gap-1 text-[#2C1810] font-semibold text-xs sm:text-sm group-hover:gap-2 transition-all duration-300">
                                             Baca artikel
-                                            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M9 5l7 7-7 7" />
                                             </svg>
@@ -208,8 +203,7 @@
                             <!-- Popular Articles List -->
                             <div class="space-y-3">
                                 <article v-for="(popular, index) in popularArticles" :key="popular.id"
-                                    @click="navigateToArticle(popular.id)"
-                                    class="group cursor-pointer">
+                                    @click="navigateToArticle(popular.id)" class="group cursor-pointer">
                                     <div
                                         class="flex gap-4 bg-[#2c18100e] border border-[#2C1810] p-2.5 overflow-hidden rounded-2xl items-center justify-center hover:bg-[#2c181015] transition-colors duration-300">
                                         <!-- Thumbnail -->
@@ -263,7 +257,6 @@ import { ChevronRight, ArrowLeft } from 'lucide-vue-next'
 const { t } = useTranslate()
 const langStore = useLangStore()
 const currentLang = computed(() => langStore.lang)
-
 const route = useRoute()
 const router = useRouter()
 
@@ -273,10 +266,8 @@ const article = computed(() => {
     )
 })
 
-// Get related articles based on same category
 const relatedArticles = computed(() => {
     if (!article.value) return []
-
     return dataArtikel
         .filter(item =>
             item.category === article.value.category &&
@@ -285,43 +276,30 @@ const relatedArticles = computed(() => {
         .slice(0, 3)
 })
 
-// Get popular articles (MAKSIMAL 5 ARTIKEL, excluding current article)
 const popularArticles = computed(() => {
     if (!article.value) return []
-
-    // Filter out current article
     const others = dataArtikel.filter(item => item.id !== article.value.id)
-
-    // Shuffle and limit to exactly 5 articles
     const shuffled = others.sort(() => 0.5 - Math.random())
-    return shuffled.slice(0, 5) // HARD LIMIT: MAX 5 ARTICLES
+    return shuffled.slice(0, 5) 
 })
 
-// Debug: Log jumlah artikel populer saat component mounted
 onMounted(() => {
     console.log(`📊 Total artikel populer yang ditampilkan: ${popularArticles.value.length} (MAX: 5)`)
 })
 
-// Format content with proper paragraph indentation for numbered lists
 const formatContent = (content) => {
     if (!content) return ''
-
-    // Split by paragraphs
     const paragraphs = content.trim().split('\n\n')
 
     return paragraphs.map(para => {
         const trimmed = para.trim()
-
-        // Check if paragraph starts with number (1., 2., 3., etc.)
         if (/^\d+\./.test(trimmed)) {
             return `<p class="ml-6 mb-4 leading-relaxed">${trimmed}</p>`
         }
-
         return `<p class="mb-4 leading-relaxed">${trimmed}</p>`
     }).join('')
 }
 
-// Format date to show only day and month
 const formatDate = (dateObj) => {
     if (currentLang.value === 'id') {
         const parts = dateObj.id.split(' ')
@@ -332,13 +310,11 @@ const formatDate = (dateObj) => {
     }
 }
 
-// Navigate to article
 const navigateToArticle = (id) => {
     router.push(`/detail-blog/${id}`)
 
 }
 
-// Share functions
 const shareToFacebook = () => {
     const url = encodeURIComponent(window.location.href)
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank')
@@ -364,7 +340,6 @@ const copyLink = async () => {
     }
 }
 
-// Watch for article changes and redirect if not found
 watch(article, (val) => {
     if (!val) {
         router.replace({ name: 'NotFound' })
@@ -372,43 +347,54 @@ watch(article, (val) => {
 }, { immediate: true })
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
+@reference "tailwindcss";
+
 /* Article Content Styling */
-.article-content {
+:deep(.article-content) {
     @apply text-gray-700 text-base leading-relaxed;
 }
 
-.article-content p {
+:deep(.article-content p) {
     @apply mb-4;
 }
 
-.article-content h2 {
-    @apply text-2xl font-bold text-[#1a0f0a] mt-8 mb-4;
+:deep(.article-content h2) {
+    @apply text-2xl font-bold mt-8 mb-4;
+    color: #1a0f0a;
 }
 
-.article-content h3 {
-    @apply text-xl font-bold text-[#1a0f0a] mt-6 mb-3;
+:deep(.article-content h3) {
+    @apply text-xl font-bold mt-6 mb-3;
+    color: #1a0f0a;
 }
 
-.article-content ul,
-.article-content ol {
+:deep(.article-content ul),
+:deep(.article-content ol) {
     @apply ml-6 mb-4 space-y-2;
 }
 
-.article-content li {
+:deep(.article-content li) {
     @apply leading-relaxed;
 }
 
-.article-content a {
-    @apply text-[#2C1810] underline hover:text-[#1a0f0a] transition-colors;
+:deep(.article-content a) {
+    @apply underline transition-colors;
+    color: #2C1810;
 }
 
-.article-content strong {
-    @apply font-bold text-[#1a0f0a];
+:deep(.article-content a:hover) {
+    color: #1a0f0a;
 }
 
-.article-content blockquote {
-    @apply border-l-4 border-[#2C1810] pl-4 italic my-4 text-gray-600;
+:deep(.article-content strong) {
+    @apply font-bold;
+    color: #1a0f0a;
+}
+
+:deep(.article-content blockquote) {
+    @apply border-l-4 pl-4 italic my-4 text-gray-600;
+    border-color: #2C1810;
 }
 
 /* Line Clamp */
