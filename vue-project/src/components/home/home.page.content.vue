@@ -36,16 +36,10 @@
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 pt-2">
                         <button
-                            class="group cursor-pointer relative overflow-hidden w-full sm:w-auto sm:px-8 py-2.5 px-5 rounded-full bg-white text-black text-sm font-medium transition-all duration-300 hover:bg-gray-100">
+                            class="cursor-pointer relative overflow-hidden w-full sm:w-auto sm:px-8 py-3 px-5 rounded-full bg-[#4A2C1F] shadow-[#ffffff13] shadow-lg text-white text-sm font-medium">
                             <span class="relative z-10">
                                 {{ t('btn_consult') }}
                             </span>
-                        </button>
-
-                        <button
-                            class="group cursor-pointer w-full sm:w-auto sm:px-8 py-2.5 px-5 rounded-full border border-white text-white text-sm font-medium transition-all duration-300 hover:bg-white hover:text-black flex items-center justify-center gap-2">
-                            <EyeIcon class="w-5 h-5" />
-                            <span>{{ t('btn_portfolio') }}</span>
                         </button>
                     </div>
 
@@ -89,8 +83,8 @@
 
 <script setup>
 import { useTranslate } from '@/composables/useTranslate'
-import svgwave from '../assets/img/svgwave.png'
-import imageBeranda from '../assets/img/codeBackdropTV.jpg'
+import svgwave from '@/assets/img/svgwave.png'
+import imageBeranda from '@/assets/img/codeBackdropTV.jpg'
 import { EyeIcon } from '@heroicons/vue/24/outline'
 const { t } = useTranslate()
 </script>

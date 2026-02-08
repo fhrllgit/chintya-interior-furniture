@@ -1,2 +1,4 @@
 @import "tailwindcss";
-/* @import "@tailwindcss/typography"; */
+@theme {
+  --font-poppins: "Poppins", system-ui, sans-serif;
+}
